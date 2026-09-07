@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #9a4b7b;
+    --primary-color-dark: #782159;
+    --secondary-color: #f7f7f7;
+    --text-dark: #333333;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: flex;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    position: fixed;
+    isolation: isolate;
+    width: 100%;
+    z-index: 9;
+
+}
+
+.nav_header {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+
+.nav_logo a img {
+    max-width: 100px;
+}
+
+.nav_logo .logo-dark {
+    display: none;
+}
+
+.nav_menu_btn {
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.nav_links {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    transition: transform 0.5s;
+    z-index: -1;
+}
+
+.nav_links.open {
+    transform: translateY(100%);
+}
+
+.nav_links a {
+    font-weight: 500;
+    color: var(--white);
+    white-space: nowrap;
+}
+
+header {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+    display: grid;
+    gap: 4rem 1rem;
+}
+
+.header_image {
+    overflow: hidden;
+}
+
+.header_image img {
+    max-width: 500px;
+    margin-inline: auto;
+}
+
+.header_content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.header_content h1 {
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 4.5rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+
+.header_content p {
+    margin-bottom: 2rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.header_btn {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.header_btn button {
+    padding: 1rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    border-radius: 5rem;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.header_btn button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.header_socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header_socials a {
+    padding: 8px 10px;
+    font-size: 1.5rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 100%;
+}
+
+.header_socials a:hover {
+    background-color: var(--primary-color-dark);
+}
+
+
+
+
+@media(width > 768px) {
+    nav {
+        position: static;
+        padding: 2rem 1rem 1rem;
+        max-width: var(--max-width);
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav_header {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .nav_logo a img {
+        max-width: 125px;
+    }
+
+    .nav_logo .logo-dark {
+        display: flex;
+    }
+
+    .nav_logo .logo-white {
+        display: none;
+    }
+
+    .nav_menu_btn {
+        display: none;
+    }
+
+    .nav_links {
+        position: static;
+        width: fit-content;
+        padding: 0;
+        flex-direction: row;
+        background-color: transparent;
+        transform: none !important
+    }
+
+    .nav_links a {
+        font-weight: 600;
+        color: var(--text-dark);
+
+    }
+
+    .nav_links a:hover {
+        color: var(--primary-color);
+    }
+
+    header {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .header_content {
+        grid-area: 1/1/2/2;
+    }
+
+    .header_content :is(h2, h1, p, .header_btn) {
+        text-align: left;
+    }
+
+    .header_socials {
+        justify-content: flex-start;
+    }
+}
