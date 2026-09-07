@@ -2,12 +2,12 @@
 
 :root {
     --primary-color: #9a4b7b;
-    --primary-color-dark: #782159;
-    --secondary-color: #f7f7f7;
+    --primary-color-dark: #782a59;
     --text-dark: #333333;
     --white: #ffffff;
     --max-width: 1200px;
 }
+
 
 * {
     padding: 0;
@@ -29,9 +29,8 @@ ul {
     list-style: none;
 }
 
-
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 nav {
@@ -39,7 +38,6 @@ nav {
     isolation: isolate;
     width: 100%;
     z-index: 9;
-
 }
 
 .nav_header {
@@ -66,7 +64,7 @@ nav {
 }
 
 .nav_links {
-    position: relative;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -101,6 +99,7 @@ header {
 
 .header_image {
     overflow: hidden;
+
 }
 
 .header_image img {
@@ -124,11 +123,10 @@ header {
     text-align: center;
 }
 
-
 .header_content p {
     margin-bottom: 2rem;
-    line-height: 1.75rem;
     font-weight: 500;
+    line-height: 1.75rem;
     color: var(--text-dark);
     text-align: center;
 }
@@ -145,11 +143,10 @@ header {
     font-size: 1rem;
     font-weight: 600;
     color: var(--white);
-    border-radius: 5rem;
     background-color: var(--primary-color);
-    cursor: pointer;
+    border-radius: 5rem;
     transition: 0.3s;
-
+    cursor: pointer;
 }
 
 .header_btn button:hover {
@@ -176,9 +173,7 @@ header {
 }
 
 
-
-
-@media(width > 768px) {
+@media (width > 768px) {
     nav {
         position: static;
         padding: 2rem 1rem 1rem;
@@ -216,13 +211,12 @@ header {
         padding: 0;
         flex-direction: row;
         background-color: transparent;
-        transform: none !important
+        transform: none !important;
     }
 
     .nav_links a {
         font-weight: 600;
         color: var(--text-dark);
-
     }
 
     .nav_links a:hover {
@@ -245,4 +239,6 @@ header {
     .header_socials {
         justify-content: flex-start;
     }
+
+
 }
